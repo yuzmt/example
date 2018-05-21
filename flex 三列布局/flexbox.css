@@ -1,0 +1,52 @@
+     html {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      header {
+        background: purple;
+        height: 100px;
+      }
+/*
+首先，我们需要选择将哪些元素将设置为柔性的盒子。我们需要给
+这些 flexible 元素的父元素 display 设置一个特定值*/
+      section {
+        display: flex;
+        /*从上到下排列*/
+        /*flex-direction: column;*/
+        /*默认值是row,因此不需要写下列代码*/
+        /*flex-direction: row;*/
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+
+/*这是一个无单位的比例值，表示每个 flex 项沿主轴的可用空间大小。
+本例中，设置 <article> 元素的 flex 值为 1，这表示每个元素占用空间
+都是相等的，占用的空间是在设置 padding 和 margin 之后剩余的空间。因为它是一个比例，这意味着将每个 flex 项的设置为 400000 的效果和 1 的时候是完全一样的。*/
+        /*flex: 1;*/
+      }
+
+      /*这里还很模糊*/
+      /*article:nth-of-type(3) {
+          flex: 1;
+          }*/
+
+        
+/*每个flex 项将首先给出200px的可用空间，然后，剩余的可用空间将根据分配的比例共享*/
+      /*  article {
+          flex: 1 200px;
+      }
+*/
+        article:nth-of-type(3) {
+          flex: 2 200px;
+      }
