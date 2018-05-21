@@ -1,0 +1,39 @@
+html {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      header {
+        background: purple;
+        height: 100px;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+      /* Add your flexbox CSS below here */
+      section {
+        display: flex;
+        /*仍然有多行布局，
+        但是每一行元素排列的方向和原来是相反的了,即从右向左*/
+        /*flex-direction: row-reverse;*/
+
+        /*解决溢出问题的关键代码*/
+        /*flex-wrap: wrap;*/
+
+        /*flex-direction: row;flex-wrap: wrap;
+        这两行代码可以用下面一行代码替换*/
+        flex-flow: row wrap;
+      }
+      article {
+        /*意味着每个元素的宽度至少是200px*/
+        flex: 200px;
+      }
