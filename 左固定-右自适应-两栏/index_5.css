@@ -1,0 +1,31 @@
+.wrapper {
+	padding: 15px 20px;
+	border: 1px dashed #ff6c60;
+}
+
+.left {
+	width: 120px;
+	border: 5px solid #ddd;
+}
+
+.right {
+	margin-left: 20px;
+	border: 5px solid #ddd;
+}
+
+.wrapper {
+	overflow: auto;
+}
+
+.wrapper .left {
+	float: left;
+	margin-left: 20px;
+}
+
+.wrapper .right {
+	margin-left: 0;
+	overflow: auto;
+}
+
+/*这个方案同样是利用了左侧浮动，但是右侧盒子通过overflow: auto;
+形成了BFC，因此右侧盒子不会与浮动的元素重叠。*/
